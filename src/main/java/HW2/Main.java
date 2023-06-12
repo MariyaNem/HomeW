@@ -16,7 +16,10 @@ public class Main {
         terrarium.addAnimal(turtle).addAnimal(lizard).addAnimal(frog);
         System.out.println(terrarium);
 
-        System.out.println(terrarium.getSpeed());
+        System.out.println("Скорость плавания: ");
+        for (SwimmingSpeed swimmers: terrarium.swimmers()) {
+            System.out.println(swimmers);
+        }
 
     }
 }

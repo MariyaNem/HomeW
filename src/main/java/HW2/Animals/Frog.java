@@ -1,8 +1,9 @@
 package main.java.HW2.Animals;
 
 import main.java.HW2.Base.Amphibians;
+import main.java.HW2.SwimmingSpeed;
 
-public class Frog extends Amphibians {
+public class Frog extends Amphibians implements SwimmingSpeed {
         public Frog(String name){
 
             super(name);
@@ -12,11 +13,12 @@ public class Frog extends Amphibians {
 
             return "Раз в два дня";
         }
-        public String swSpeed(){
-            return "15 км/час";
+        @Override
+        public int getSwimmingSpeed() {
+            return 15;
         }
-
-        public String toString(){
-            return String.format("Лягушка %s", super.toString());
+        @Override
+        public String toString() {
+        return String.format("Лягушка %s Скорость плавания: %d", super.toString(), getSwimmingSpeed());
         }
 }

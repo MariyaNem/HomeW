@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Terrarium {
-    private Speed swSpeed = new Speed();
         private final List<Animal> terrarium = new ArrayList<>();
 
         public Terrarium addAnimal(Animal someAnimal){
@@ -24,19 +23,15 @@ public class Terrarium {
             return builder.toString();
         }
 
-        private List<SwimmingSpeed> getSwimmingSpeed(){
-            List<SwimmingSpeed> result = new ArrayList<>(terrarium);
-            result.add(swSpeed);
-            return result;
-        }
-
-        public String getSpeed(){
-            StringBuilder sb = new StringBuilder();
-            for (SwimmingSpeed swimmingSpeed:getSwimmingSpeed()){
-                sb.append(swimmingSpeed.swSpeed()).append("\n");
+    public List<SwimmingSpeed> swimmers() {
+        List<SwimmingSpeed> swimmers = new ArrayList<>();
+        for (Animal animal: terrarium) {
+            if (animal instanceof SwimmingSpeed) {
+                swimmers.add((SwimmingSpeed) animal);
             }
-            return sb.toString();
         }
+        return swimmers;
+    }
 
 
 }
