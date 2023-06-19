@@ -5,6 +5,7 @@ public class MagicalShield implements Shield {
     public int defend() {
         return 15;
     }
+
     @Override
     public String toString() {
         return String.format("Magical shield\nDefence:%d",this.defend());

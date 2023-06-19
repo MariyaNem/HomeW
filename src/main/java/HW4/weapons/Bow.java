@@ -8,7 +8,6 @@ public class Bow extends Throwing {
         this.name = name;
     }
 
-
     @Override
     public int damage() {
         return 20;

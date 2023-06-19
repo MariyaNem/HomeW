@@ -7,7 +7,6 @@ public class Rouge extends Warrior<Dagger, Shield>{
 
     public Rouge(String name, int hp, Dagger weapon, Shield shield){
         super(name, hp, weapon, shield);
-
     }
     @Override
     public String toString() {

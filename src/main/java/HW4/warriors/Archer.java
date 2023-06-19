@@ -1,5 +1,4 @@
 package main.java.HW4.warriors;
-
 import main.java.HW4.shields.Shield;
 import main.java.HW4.weapons.Throwing;
 

@@ -7,7 +7,6 @@ public class Person {
         return hp>0;
     }
 
-
     public Person(String name, int hp) {
         this.name = name;
         this.hp = hp;

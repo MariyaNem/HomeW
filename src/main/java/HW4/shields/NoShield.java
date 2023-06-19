@@ -5,6 +5,7 @@ public class NoShield implements Shield {
     public int defend() {
         return 0;
     }
+
     @Override
     public String toString() {
         return "Without shield";
